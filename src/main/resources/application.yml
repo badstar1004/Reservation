@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/reservationsystem?characterEncoding=UTF-8&serverTimezone=UTC
+    username: Reservate
+    password: 1234
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: ture
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher

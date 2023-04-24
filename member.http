@@ -1,0 +1,56 @@
+
+### 회원가입 (멤버)
+POST http://localhost:8080/member/signup
+Content-Type: application/json
+
+{
+  "name": "기믄정",
+  "password": "1234",
+  "phoneNumber": "010-6666-7777",
+  "userClass": "MEMBER",
+  "userEmail": "badstar1004@naver.com"
+}
+
+### 로그인 (멤버)
+POST http://localhost:8080/member/signin
+Content-Type: application/json
+
+{
+  "password": "1234",
+  "userEmail": "badstar1004@naver.com"
+}
+
+### 회원정보 조회 (멤버)
+GET http://localhost:8080/member/1
+Content-Type: application/json
+ACCOUNT-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODIwMDAwMTksImV4cCI6MTY4MjA4NjQxOX0.PLEEsKgDFhMoMmyMrRxaDA1H4DCOkWPboynm0RCY6lY
+
+### 매장 등록 (멤버)
+POST http://localhost:8080/member/1/restaurant
+Content-Type: application/json
+ACCOUNT-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODIwMDAwMTksImV4cCI6MTY4MjA4NjQxOX0.PLEEsKgDFhMoMmyMrRxaDA1H4DCOkWPboynm0RCY6lY
+
+{
+  "restaurantAddress": "서울시 서초구",
+  "restaurantName": "이따이따요",
+  "restaurantTelNumber": "031-444-5555",
+  "tableCount": 5
+}
+
+### 예약 리스트 조회 (멤버)
+GET http://localhost:8080/member/1/restaurant/reservation-list
+Content-Type: application/json
+ACCOUNT-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODIwMDAwMTksImV4cCI6MTY4MjA4NjQxOX0.PLEEsKgDFhMoMmyMrRxaDA1H4DCOkWPboynm0RCY6lY
+
+### 예약 승인, 취소 (멤버)
+PUT http://localhost:8080/member/1/reservation/approval
+Content-Type: application/json
+ACCOUNT-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODIwMDAwMTksImV4cCI6MTY4MjA4NjQxOX0.PLEEsKgDFhMoMmyMrRxaDA1H4DCOkWPboynm0RCY6lY
+
+{
+  "approvalType": "APPROVAL",
+  "reservationNumber": [
+    "20230420001",
+    "20230420002"
+  ]
+}

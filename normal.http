@@ -1,0 +1,51 @@
+
+### 회원가입 (일반회원)
+POST http://localhost:8080/normal/signup
+Content-Type: application/json
+
+{
+  "name": "누누",
+  "password": "1234",
+  "phoneNumber": "010-6666-7777",
+  "userClass": "NORMAL",
+  "userEmail": "aaaa@naver.com"
+}
+
+### 로그인 (일반회원)
+POST http://localhost:8080/normal/signin
+Content-Type: application/json
+
+{
+  "userEmail": "aaaa@naver.com",
+  "password": "1234"
+}
+
+### 회원정보 조회 (일반회원)
+GET http://localhost:8080/normal/1
+Content-Type: application/json
+ACCOUNT-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODIwODM2MTYsImV4cCI6MTY4MjE3MDAxNn0.Kg6RbYuVYxjfJ0QK-i2-CHAw3DHffKPkwNR5R1VanXE
+
+### 매장 예약 (일반회원)
+POST http://localhost:8080/normal/1/reservation/1
+Content-Type: application/json
+ACCOUNT-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODIwODM2MTYsImV4cCI6MTY4MjE3MDAxNn0.Kg6RbYuVYxjfJ0QK-i2-CHAw3DHffKPkwNR5R1VanXE
+
+{
+  "reservationDate": "2023-04-28",
+  "reservationDateTime": "2023-04-28T10:00:00.000Z"
+}
+
+### 예약 리스트 조회 (일반회원)
+GET http://localhost:8080/normal/1/restaurant/reservation-list
+Content-Type: application/json
+ACCOUNT-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODIwODM2MTYsImV4cCI6MTY4MjE3MDAxNn0.Kg6RbYuVYxjfJ0QK-i2-CHAw3DHffKPkwNR5R1VanXE
+
+### 리뷰 등록 (일반회원)
+POST http://localhost:8080/normal/1/1/20230420001/review
+Content-Type: application/json
+ACCOUNT-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODIwODM2MTYsImV4cCI6MTY4MjE3MDAxNn0.Kg6RbYuVYxjfJ0QK-i2-CHAw3DHffKPkwNR5R1VanXE
+
+{
+  "content": "또 예약해서 먹었네요 맛있어요!!",
+  "rating": 4.6
+}

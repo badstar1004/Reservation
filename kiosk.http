@@ -1,0 +1,8 @@
+### 예약 확인 (일반회원)
+GET http://localhost:8080/kiosk/1/reservation-check
+Content-Type: application/json
+
+{
+  "reservationNumber": "20230420001",
+  "phoneNumber": "010-6666-7777"
+}
