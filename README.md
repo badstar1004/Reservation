@@ -5,7 +5,7 @@
 - Java
 - MySql
 - Spring Boot
-- Web, JAP, Lombok, Validation, jwt, jackson-datatype, commons-lang3
+- Web, JAP, Lombok, Validation, jwt
 
 # 개발 기간
 - 2023.04.12 ~ 2023.04.24
