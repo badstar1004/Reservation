@@ -1,12 +1,11 @@
 # Reservation
-매장 예약 관리 프로젝트 (학습용 프로젝트)
+매장 예약 관리 프로젝트 (학습용 개인 프로젝트)
 
 # 기술 & 툴
-- Java jdk 11
+- Java
 - MySql
-- Spring Boot 2.7.10, gradle
+- Spring Boot
 - Web, JAP, Lombok, Validation, jwt, jackson-datatype, commons-lang3
-- IntelliJ Ultimate
 
 # 개발 기간
 - 2023.04.12 ~ 2023.04.24
